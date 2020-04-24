@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Function demo</title>
+</head>
+
+<body>
+
+    <script>
+        // var a = 100;
+        // console.log('The value of a is ' + a); // The value of a is undefined
+        // document.write("Hello world");
+        // // window.alert('this is window alret');
+        // var flag = true;
+        // var b = null;
+        // console.log(b);
+        // var today = new Date();
+        // var month = today.getMonth();
+        // console.log(today);
+        // console.log(month);
+
+        // function displayMsg() {
+        //     //document.getElementById('para').innerText = 'Hello worldd';
+        //     window.print();
+        // }
+
+
+        const copy_to_Clipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  const selected =
+    document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+  if (selected) {
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(selected);
+  }
+};
+
+    </script>
+
+     
+
+</body>
+
+</html>
